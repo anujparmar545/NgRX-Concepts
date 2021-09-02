@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { isAuthenticated } from 'src/app/auth/state/auth.selector';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isAuthenticated !:  Observable<boolean>;
 
-  constructor() { }
+  constructor(private store : Store) { }
 
   ngOnInit(): void {
+
+    this.isAuthenticated = this.store.select(isAuthenticated);
+    console.log(this.isAuthenticated);
+
+  }
+
+  onLogout(){
+    console.log('logout');
+
   }
 
 }
