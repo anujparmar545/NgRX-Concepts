@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  FIREBASE_API_KEY: 'AIzaSyBytwiNCe60kcCQHWYhwxYh2cdfGM9VOdI'
+  FIREBASE_API_KEY: 'AIzaSyBytwiNCe60kcCQHWYhwxYh2cdfGM9VOdI',
+  FIREBASE_DB_URL: 'https://ngrx-anuj-default-rtdb.firebaseio.com/'
 };
 
 /*

@@ -25,7 +25,7 @@
             *ngIf = "!(isAuthenticated | async)">Sign up</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#" *ngIf = "(isAuthenticated | async)" (click)="onLogout()">Logout</a>
+        <a class="nav-link" href="#" *ngIf = "(isAuthenticated | async)" (click)="onLogout($event)">Logout</a>
       </li>
 
       </ul>
